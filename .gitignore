@@ -1,3 +1,4 @@
+pom.xml
 target/
 pom.xml
 pom.xml.tag
@@ -16,3 +17,6 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+pom.xml
+pom.xml
+*.xml
