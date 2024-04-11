@@ -160,7 +160,21 @@ public class mainPage extends JFrame {
                 if (!e.getValueIsAdjusting()) {
                     int selectedRow = table.getSelectedRow();
                     if (selectedRow != -1) {
-                        System.out.println("Selected Product: " + table.getValueAt(selectedRow, 0));
+                    	String id = (String) table.getValueAt(selectedRow,0);
+                    	String name = (String) table.getValueAt(selectedRow,1);
+                    	String hsn = (String) table.getValueAt(selectedRow,2);
+                    	String category = (String) table.getValueAt(selectedRow,3);
+                    	String subcategory = (String) table.getValueAt(selectedRow,4);
+                    	String expirydate = (String) table.getValueAt(selectedRow,5);
+                    	String tax = String.valueOf(table.getValueAt(selectedRow,6));
+                    	String purchasedprice = String.valueOf(table.getValueAt(selectedRow,7));
+                    	String markedprice = String.valueOf(table.getValueAt(selectedRow,8));
+                    	String sellingprice = String.valueOf(table.getValueAt(selectedRow,9));
+                    	String quantity = String.valueOf(table.getValueAt(selectedRow,10));
+                    
+                    	updateProduct up = new updateProduct(id,name,hsn,category,subcategory,expirydate,tax,purchasedprice,markedprice,sellingprice,quantity);
+                    	up.setVisible(true);
+                    	
                     }
                 }
             }
